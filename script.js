@@ -1,39 +1,59 @@
-// Accordion functionality
-const accordions = document.querySelectorAll('.accordion');
+document.addEventListener("DOMContentLoaded", function () {
+  const accordionButtons = document.querySelectorAll(".accordion-button");
 
-accordions.forEach(accordion => {
-    accordion.addEventListener('click', () => {
-        // Close other open accordions
-        accordions.forEach(item => {
-            if (item !== accordion) {
-                item.classList.remove('active');
-                item.nextElementSibling.style.display = 'none';
-            }
-        });
-        // Toggle current accordion
-        accordion.classList.toggle('active');
-        const panel = accordion.nextElementSibling;
-        if (accordion.classList.contains('active')) {
-            panel.style.display = 'block';
-        } else {
-            panel.style.display = 'none';
+  accordionButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const expanded = button.getAttribute("aria-expanded") === "true";
+      const panel = button.nextElementSibling;
+
+      accordionButtons.forEach((otherButton) => {
+        if (otherButton !== button) {
+          otherButton.setAttribute("aria-expanded", "false");
+          const otherPanel = otherButton.nextElementSibling;
+          if (otherPanel) {
+            otherPanel.style.maxHeight = null;
+          }
         }
+      });
+
+      button.setAttribute("aria-expanded", String(!expanded));
+      if (!expanded && panel) {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      } else if (panel) {
+        panel.style.maxHeight = null;
+      }
     });
+  });
 });
 
-// Language toggle functionality with localStorage
-const languageToggle = document.getElementById('language-toggle');
-const currentLanguage = localStorage.getItem('language') || 'en';
-
-function setLanguage(language) {
-    localStorage.setItem('language', language);
-    // Update language on the page based on selection
-    // This is where you would include your logic to switch languages
+// Language toggle functionality
+function toggleLanguage() {
+    const currentLanguage = localStorage.getItem('language') || 'en';
+    const newLanguage = currentLanguage === 'en' ? 'da' : 'en';
+    setLanguage(newLanguage);
 }
 
-languageToggle.addEventListener('change', (event) => {
-    setLanguage(event.target.value);
-});
+function setLanguage(language) {
+    const elements = document.querySelectorAll('[data-en], [data-da]');
+    const toggleButton = document.getElementById('language-toggle');
 
-// Set the initial language on page load
-setLanguage(currentLanguage);
+    elements.forEach(el => {
+        if (language === 'da') {
+            el.textContent = el.getAttribute('data-da') || el.textContent;
+        } else {
+            el.textContent = el.getAttribute('data-en') || el.textContent;
+        }
+    });
+
+    if (toggleButton) {
+        toggleButton.textContent = language === 'da' ? 'EN' : 'DA';
+    }
+
+    localStorage.setItem('language', language);
+}
+
+// Initialize language on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLanguage = localStorage.getItem('language') || 'en';
+    setLanguage(savedLanguage);
+});

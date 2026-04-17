@@ -3,36 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Om Mig</title>
+    <link rel="stylesheet" href="style.css">
+    <title data-en="About Me" data-da="Om Mig">Om Mig</title>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a class="active" href="om-mig.html">Om mig</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
+    <nav class="top-nav">
+        <ul class="nav-menu">
+            <li><a href="index.html" data-en="CV" data-da="CV">CV</a></li>
+            <li><a href="om-mig.html" class="active" data-en="About Me" data-da="Om mig">Om mig</a></li>
+            <li class="language-toggle-container">
+                <button id="language-toggle" class="language-toggle" onclick="toggleLanguage()">EN</button>
+            </li>
         </ul>
     </nav>
 
-    <section id="min-historie">
-        <h2>Min historie</h2>
-        <p>Her kan du fortælle om din historie, hvordan du kom til, hvor du er i dag, og hvad der har formet dig.</p>
-    </section>
+    <div class="page-shell">
+        <section class="hero">
+            <div class="hero-content">
+                <h1 data-en="About Me" data-da="Om mig">About Me</h1>
+            </div>
+        </section>
 
-    <section id="min-passion">
-        <h2>Min passion</h2>
-        <p>Hvad er din passion? Her kan du skrive om det, der virkelig får dig til at brænde igennem.</p>
-    </section>
+        <section id="min-historie" class="section-card">
+            <h2 data-en="My Story" data-da="Min historie">My Story</h2>
+            <p data-en="Here you can tell your story, how you got to where you are today, and what has shaped you." data-da="Her kan du fortælle om din historie, hvordan du kom til, hvor du er i dag, og hvad der har formet dig.">Here you can tell your story, how you got to where you are today, and what has shaped you.</p>
+        </section>
 
-    <section id="interesser-og-hobbyer">
-        <h2>Interesser og hobbyer</h2>
-        <p>Beskriv dine interesser og hobbyer, hvad gør du i din fritid? Hvad elsker du at lave?</p>
-    </section>
+        <section id="min-passion" class="section-card">
+            <h2 data-en="My Passion" data-da="Min passion">My Passion</h2>
+            <p data-en="What is your passion? Write about what really drives you forward." data-da="Hvad er din passion? Her kan du skrive om det, der virkelig får dig til at brænde igennem.">What is your passion? Write about what really drives you forward.</p>
+        </section>
 
-    <section id="lad-os-tale-sammen">
-        <h2>Lad os tale sammen</h2>
-        <p>Giv dine besøgende muligheden for at kontakte dig, måske med en kontaktformular?</p>
-    </section>
+        <section id="interesser-og-hobbyer" class="section-card">
+            <h2 data-en="Interests and Hobbies" data-da="Interesser og hobbyer">Interests and Hobbies</h2>
+            <p data-en="Describe your interests and hobbies, what do you do in your free time? What do you love to do?" data-da="Beskriv dine interesser og hobbyer, hvad gør du i din fritid? Hvad elsker du at lave?">Describe your interests and hobbies, what do you do in your free time? What do you love to do?</p>
+        </section>
+
+        <section id="lad-os-tale-sammen" class="section-card">
+            <h2 data-en="Let's Talk" data-da="Lad os tale sammen">Let's Talk</h2>
+            <p data-en="Give your visitors the opportunity to contact you, maybe with a contact form?" data-da="Giv dine besøgende muligheden for at kontakte dig, måske med en kontaktformular?">Give your visitors the opportunity to contact you, maybe with a contact form?</p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
