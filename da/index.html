@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dansk version af mit personlige CV og profilsite.">
+  <title>CV og profil</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <div id="scroll-progress" aria-hidden="true"></div>
+  <header class="top-nav">
+    <div class="nav-left">
+      <nav aria-label="Primær navigation">
+        <ul class="nav-menu">
+          <li>
+            <a href="#top" class="home-icon" aria-label="Gå til toppen" title="Top">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M2 10L10 3L18 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4 10V17H8V13H12V17H16V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </li>
+          <li><a href="#resume">CV</a></li>
+          <li><a href="#about">Om mig</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="nav-right">
+      <button id="theme-toggle" class="nav-btn icon-btn" type="button" aria-label="Skift tema" title="Skift tema"></button>
+      <a class="nav-btn lang-switch" href="../en/index.html" lang="en" hreflang="en" aria-label="Switch to English">EN</a>
+    </div>
+  </header>
+
+  <main class="page-shell" id="top">
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Personlig profil</p>
+        <h1>Velkommen</h1>
+        <p class="subtitle">Dette er den danske version af mit personlige site med samlet CV, profil og kontaktinformation i en enkel og vedligeholdelig struktur.</p>
+      </div>
+    </section>
+
+    <section id="resume" class="section-card">
+      <h2>Professionelt resumé</h2>
+      <p>Jeg arbejder struktureret, kommunikerer klart og trives med at omsætte komplekse behov til løsninger, der fungerer i praksis. Min profil kombinerer projektledelse, digital forståelse og en samarbejdsorienteret tilgang.</p>
+    </section>
+
+    <section id="experience" class="section-card experience">
+      <h2>Erhvervserfaring</h2>
+
+      <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false" type="button">
+          <span class="accordion-heading">
+            <strong>Projektleder</strong>
+            <small>Firma A · 2022-2025</small>
+          </span>
+          <span class="button-skills">
+            <span class="skill-pill">Projektledelse</span>
+            <span class="skill-pill">Agile metoder</span>
+            <span class="skill-pill">Teamledelse</span>
+            <span class="skill-pill">Budgetstyring</span>
+            <span class="skill-pill">Interessenthåndtering</span>
+          </span>
+        </button>
+        <div class="accordion-panel">
+          <p>Ledede tværfaglige teams og sikrede, at projekter blev leveret til tiden og inden for rammerne.</p>
+          <p>Arbejdede med planlægning, prioritering og koordinering mellem interne ressourcer og eksterne samarbejdspartnere.</p>
+          <p>Skabte mere stabile processer og højere fremdrift gennem tydelig forventningsafstemning og løbende opfølgning.</p>
+          <div class="job-skills">
+            <span class="skill-pill">Projektledelse</span>
+            <span class="skill-pill">Agile metoder</span>
+            <span class="skill-pill">Teamledelse</span>
+            <span class="skill-pill">Budgetstyring</span>
+            <span class="skill-pill">Interessenthåndtering</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false" type="button">
+          <span class="accordion-heading">
+            <strong>Konsulent</strong>
+            <small>Firma B · 2019-2022</small>
+          </span>
+          <span class="button-skills">
+            <span class="skill-pill">Forretningsanalyse</span>
+            <span class="skill-pill">Workshops</span>
+            <span class="skill-pill">Systemdesign</span>
+            <span class="skill-pill">Kunderådgivning</span>
+            <span class="skill-pill">Dokumentation</span>
+            <span class="skill-pill">Procesoptimering</span>
+          </span>
+        </button>
+        <div class="accordion-panel">
+          <p>Rådgav kunder om digitale løsninger og omsatte forretningsbehov til konkrete anbefalinger og implementeringer.</p>
+          <p>Faciliterede workshops, analyserede arbejdsgange og beskrev løsninger, som kunne forankres i den daglige drift.</p>
+          <p>Leverede projekter med høj kundetilfredshed gennem tydelig dokumentation og tæt dialog i hele forløbet.</p>
+          <div class="job-skills">
+            <span class="skill-pill">Forretningsanalyse</span>
+            <span class="skill-pill">Workshops</span>
+            <span class="skill-pill">Systemdesign</span>
+            <span class="skill-pill">Kunderådgivning</span>
+            <span class="skill-pill">Dokumentation</span>
+            <span class="skill-pill">Procesoptimering</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false" type="button">
+          <span class="accordion-heading">
+            <strong>Junior Developer</strong>
+            <small>Firma C · 2017-2019</small>
+          </span>
+          <span class="button-skills">
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">HTML/CSS</span>
+            <span class="skill-pill">Backend</span>
+            <span class="skill-pill">Databaser</span>
+          </span>
+        </button>
+        <div class="accordion-panel">
+          <p>Udviklede og vedligeholdt webapplikationer med fokus på stabile funktioner og gode brugeroplevelser.</p>
+          <p>Bidrog til både frontend og backend og samarbejdede tæt med designere og mere erfarne udviklere.</p>
+          <p>Optimerede løsninger løbende og lærte hurtigt nye teknologier gennem praktisk arbejde og kodegennemgang.</p>
+          <div class="job-skills">
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">HTML/CSS</span>
+            <span class="skill-pill">Backend</span>
+            <span class="skill-pill">Databaser</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section-card">
+      <h2>Uddannelse</h2>
+      <div class="edu-grid">
+        <article class="edu-item">
+          <h3>Kandidat i kommunikation</h3>
+          <p>Universitet X · 2017-2019</p>
+        </article>
+        <article class="edu-item">
+          <h3>Bachelor i IT</h3>
+          <p>Universitet Y · 2014-2017</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section-card">
+      <h2>Andre egenskaber / skills</h2>
+      <ul class="skill-list">
+        <li>Projektstyring og prioritering</li>
+        <li>Tværfagligt samarbejde</li>
+        <li>Problemløsning og analyse</li>
+        <li>Facilitering og præsentation</li>
+        <li>Digital forståelse</li>
+        <li>Struktureret kommunikation</li>
+      </ul>
+    </section>
+
+    <section id="languages" class="section-card">
+      <h2>Sprog</h2>
+      <ul class="plain-list">
+        <li>Dansk · Modersmål</li>
+        <li>Engelsk · Flydende</li>
+        <li>Tysk · Grundlæggende</li>
+      </ul>
+    </section>
+
+    <section id="personal" class="section-card">
+      <h2>Personligt</h2>
+      <p>Jeg er nysgerrig, ansvarlig og motiveres af at skabe fremdrift sammen med andre. Jeg trives bedst i miljøer, hvor kvalitet, relationer og tydelig retning går hånd i hånd.</p>
+    </section>
+
+    <section id="about" class="section-card">
+      <h2>Min historie</h2>
+      <p>Min vej har været præget af både tekniske og kommunikative roller, hvilket har givet mig en stærk evne til at bygge bro mellem mennesker, processer og digitale løsninger.</p>
+    </section>
+
+    <section id="passion" class="section-card">
+      <h2>Min passion</h2>
+      <p>Jeg brænder for at forbedre oplevelser og arbejdsgange gennem gennemarbejdede løsninger, tydelig struktur og godt samarbejde på tværs af fagligheder.</p>
+    </section>
+
+    <section id="interests" class="section-card">
+      <h2>Interesser og hobbyer</h2>
+      <p>I min fritid følger jeg med i teknologi, design og digitale trends. Jeg bruger også tid på læsning, kreative projekter og aktiviteter, der giver ny energi og inspiration.</p>
+    </section>
+
+    <section id="contact" class="section-card">
+      <h2>Lad os tale sammen</h2>
+      <ul class="contact-list">
+        <li>E-mail · navn@example.com</li>
+        <li>LinkedIn · linkedin.com/in/ditnavn</li>
+        <li>Lokation · København, Danmark</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="../assets/script.js"></script>
+</body>
+</html>
