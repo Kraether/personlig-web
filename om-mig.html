@@ -7,14 +7,17 @@
     <title data-en="About Me" data-da="Om Mig">Om Mig</title>
 </head>
 <body>
-    <nav class="top-nav">
-        <ul class="nav-menu">
-            <li><a href="index.html" data-en="CV" data-da="CV">CV</a></li>
-            <li><a href="om-mig.html" class="active" data-en="About Me" data-da="Om mig">Om mig</a></li>
-            <li class="language-toggle-container">
-                <button id="language-toggle" class="language-toggle" onclick="toggleLanguage()">EN</button>
-            </li>
-        </ul>
+    <nav class="top-nav"> 
+        <div class="nav-left">
+            <ul class="nav-menu">
+                <li><a href="cv.html" data-en="CV" data-da="CV">CV</a></li>
+                <li><a href="om-mig.html" class="active" data-en="About Me" data-da="Om mig">Om mig</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <button id="theme-toggle" class="nav-btn" onclick="toggleTheme()">Light</button>
+            <button id="language-toggle" class="nav-btn" onclick="toggleLanguage()">EN</button>
+        </div>
     </nav>
 
     <div class="page-shell">

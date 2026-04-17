@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Welcome</title>
+</head>
+<body>
+    <nav class="top-nav"> 
+        <div class="nav-left">
+            <ul class="nav-menu">
+                <li><a href="cv.html" data-en="CV" data-da="CV">CV</a></li>
+                <li><a href="om-mig.html" data-en="About Me" data-da="Om mig">Om mig</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <button id="theme-toggle" class="nav-btn" onclick="toggleTheme()">Light</button>
+            <button id="language-toggle" class="nav-btn" onclick="toggleLanguage()">EN</button>
+        </div>
+    </nav>
+    <div class="page-shell">
+        <section class="hero">
+            <div class="hero-content">
+                <h1 data-en="Welcome!" data-da="Velkommen!">Welcome!</h1>
+                <p data-en="This is my personal website. Use the menu to view my CV or learn more about me." data-da="Dette er min personlige hjemmeside. Brug menuen for at se mit CV eller lære mere om mig.">This is my personal website. Use the menu to view my CV or learn more about me.</p>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

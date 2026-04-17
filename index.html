@@ -4,75 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title data-en="CV" data-da="CV">CV</title>
+    <title>Welcome</title>
 </head>
 <body>
-    <nav class="top-nav">
-        <ul class="nav-menu">
-            <li><a href="index.html" class="active" data-en="CV" data-da="CV">CV</a></li>
-            <li><a href="om-mig.html" data-en="About Me" data-da="Om mig">Om mig</a></li>
-            <li class="language-toggle-container">
-                <button id="language-toggle" class="language-toggle" onclick="toggleLanguage()">EN</button>
-            </li>
-        </ul>
+    <nav class="top-nav"> 
+        <div class="nav-left">
+            <ul class="nav-menu">
+                <li><a href="cv.html" data-en="CV" data-da="CV">CV</a></li>
+                <li><a href="om-mig.html" data-en="About Me" data-da="Om mig">Om mig</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <button id="theme-toggle" class="nav-btn" onclick="toggleTheme()">Light</button>
+            <button id="language-toggle" class="nav-btn" onclick="toggleLanguage()">EN</button>
+        </div>
     </nav>
-
     <div class="page-shell">
         <section class="hero">
             <div class="hero-content">
-                <p class="eyebrow" data-en="WELCOME" data-da="VELKOMMEN">WELCOME</p>
-                <h1 data-en="Kenneth's CV" data-da="Kenneths CV">Kenneth's CV</h1>
-                <p class="subtitle" data-en="This is my professional CV showcasing my skills and experience." data-da="Dette er mit faglige CV, som viser mine færdigheder og erfaring.">This is my professional CV showcasing my skills and experience.</p>
-            </div>
-        </section>
-
-        <section class="section-card">
-            <div class="section-header">
-                <h2 data-en="Experience" data-da="Erfaring">Experience</h2>
-            </div>
-            <div class="experience">
-                <div class="accordion-item">
-                    <button class="accordion-button" aria-expanded="false">
-                        <span>
-                            <strong data-en="Job Title 1" data-da="Jobtitel 1">Job Title 1</strong>
-                            <small data-en="Company Name" data-da="Virksomhedsnavn">Company Name</small>
-                        </span>
-                    </button>
-                    <div class="accordion-panel">
-                        <p data-en="Description of your role and achievements." data-da="Beskrivelse af din rolle og præstationer.">Description of your role and achievements.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-card">
-            <div class="section-header">
-                <h2 data-en="Education" data-da="Uddannelse">Education</h2>
-            </div>
-            <div class="education">
-                <div class="edu-grid">
-                    <div>
-                        <h3 data-en="Degree Name" data-da="Uddannelsesbetegnelse">Degree Name</h3>
-                        <p data-en="University / School" data-da="Universitet / Skole">University / School</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-card">
-            <div class="section-header">
-                <h2 data-en="Skills" data-da="Færdigheder">Skills</h2>
-            </div>
-            <div class="skills">
-                <ul class="skill-list">
-                    <li data-en="Skill 1" data-da="Færdighed 1">Skill 1</li>
-                    <li data-en="Skill 2" data-da="Færdighed 2">Skill 2</li>
-                    <li data-en="Skill 3" data-da="Færdighed 3">Skill 3</li>
-                </ul>
+                <h1 data-en="Welcome!" data-da="Velkommen!">Welcome!</h1>
+                <p data-en="This is my personal website. Use the menu to view my CV or learn more about me." data-da="Dette er min personlige hjemmeside. Brug menuen for at se mit CV eller lære mere om mig.">This is my personal website. Use the menu to view my CV or learn more about me.</p>
             </div>
         </section>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>

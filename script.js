@@ -57,3 +57,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedLanguage = localStorage.getItem('language') || 'en';
     setLanguage(savedLanguage);
 });
+
+function toggleTheme() {
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+}
+
+function setTheme(theme) {
+    const body = document.body;
+    const themeButton = document.getElementById('theme-toggle');
+
+    if (theme === 'light') {
+        body.classList.add('light-theme');
+        if (themeButton) {
+            themeButton.textContent = 'Dark';
+        }
+    } else {
+        body.classList.remove('light-theme');
+        if (themeButton) {
+            themeButton.textContent = 'Light';
+        }
+    }
+
+    localStorage.setItem('theme', theme);
+}
+
+// Initialize theme on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    setTheme(savedTheme);
+});
