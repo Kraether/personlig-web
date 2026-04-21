@@ -210,7 +210,7 @@ body.light-theme .hero {
   border: 1px solid rgba(13, 110, 253, 0.16);
   border-radius: 14px;
   padding: 0.3rem 0.65rem;
-  color: var(--muted);
+  color: var(--text);
   font-size: 0.75rem;
   line-height: 1.2;
   white-space: nowrap;
