@@ -186,6 +186,13 @@ body.light-theme .hero {
   border-top: 1px solid var(--border);
 }
 
+.job-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.75rem;
+}
+
 .skill-pill {
   display: inline-block;
   background: rgba(13, 110, 253, 0.12);
@@ -194,6 +201,18 @@ body.light-theme .hero {
   padding: 0.5rem 1rem;
   color: var(--text);
   font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.tech-pill {
+  display: inline-block;
+  background: rgba(13, 110, 253, 0.08);
+  border: 1px solid rgba(13, 110, 253, 0.16);
+  border-radius: 14px;
+  padding: 0.3rem 0.65rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+  line-height: 1.2;
   white-space: nowrap;
 }
 
