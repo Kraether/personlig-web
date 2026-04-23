@@ -399,7 +399,7 @@ body.light-theme .progress-bullet.active {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   #scroll-progress {
     display: none;
   }
