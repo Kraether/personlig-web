@@ -121,7 +121,7 @@ body.light-theme .hero {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1.25rem 1.5rem;
+  padding: 1.25rem 5.75rem 1.25rem 1.5rem;
   border: 1px solid var(--border);
   border-radius: 1.5rem;
   background: transparent;
@@ -129,6 +129,7 @@ body.light-theme .hero {
   cursor: pointer;
   transition: background 0.2s ease, border-color 0.2s ease;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .accordion-button:hover,
@@ -150,6 +151,41 @@ body.light-theme .hero {
 .accordion-heading small {
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+.accordion-button::after {
+  content: "Expand";
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid rgba(13, 110, 253, 0.24);
+  border-radius: 999px;
+  background: rgba(13, 110, 253, 0.1);
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+html[lang="da"] .accordion-button::after {
+  content: "Fold ud";
+}
+
+.accordion-button[aria-expanded="true"]::after {
+  content: "Collapse";
+}
+
+html[lang="da"] .accordion-button[aria-expanded="true"]::after {
+  content: "Luk";
+}
+
+body.light-theme .accordion-button::after {
+  background: rgba(13, 110, 253, 0.08);
 }
 
 .button-skills {
@@ -457,6 +493,15 @@ body.light-theme .progress-bullet.active {
 
   .section-card {
     padding: 1.5rem;
+  }
+
+  .accordion-button {
+    padding-right: 1.25rem;
+    padding-top: 3.85rem;
+  }
+
+  .accordion-button::after {
+    right: 1.25rem;
   }
 
   .edu-grid,
